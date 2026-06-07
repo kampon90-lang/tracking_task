@@ -26,7 +26,7 @@ input = "assets/input.css"
 [bundle]
 identifier = "com.mycompany"
 publisher = "Your Name"
-icon = ["assets/favicon.ico", "assets/icons/icon_128x128.png"]
+icon = ["assets/Dog_ico.ico", "assets/Dog_icons.icns"]
 short_description = "My Dioxus app"
 
 [bundle.macos]
