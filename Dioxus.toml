@@ -1,0 +1,24 @@
+[application]
+
+[web.app]
+
+# HTML title tag content
+title = "task_tracker"
+
+# include `assets` in web platform
+[web.resource]
+
+# Additional CSS style files
+style = []
+
+# Additional JavaScript files
+script = []
+
+[web.resource.dev]
+assets = ["assets"]
+# Javascript code file
+# serve: [dev-server] only
+script = []
+
+[tailwind]
+input = "assets/input.css"

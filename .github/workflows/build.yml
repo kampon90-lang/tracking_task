@@ -1,0 +1,27 @@
+name: Build Dioxus App
+
+on: [push]
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Dioxus CLI
+        run: cargo install dioxus-cli
+
+      - name: Build
+        run: |
+          # Build เป็น Desktop App (ใน Dioxus v0.7 จะได้ไฟล์ executable)
+          dx build --platform desktop --release
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: task-tracker-macos
+          # ใน Dioxus desktop แอปจะอยู่ที่โฟลเดอร์ target/dx/task_tracker/release/assets
+          path: target/dx/task_tracker/release/assets/
