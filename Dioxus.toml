@@ -22,3 +22,6 @@ script = []
 
 [tailwind]
 input = "assets/input.css"
+
+[bundle]
+identifier = "com.mycompany"
