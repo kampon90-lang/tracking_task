@@ -25,3 +25,11 @@ input = "assets/input.css"
 
 [bundle]
 identifier = "com.mycompany"
+publisher = "Your Name"
+icon = ["assets/favicon.ico", "assets/icons/icon_128x128.png"]
+short_description = "My Dioxus app"
+
+[bundle.macos]
+minimum_system_version = "10.13"
+signing_identity = "-"   # "-" = ad-hoc, no Apple Developer account needed
+hardened_runtime = false
